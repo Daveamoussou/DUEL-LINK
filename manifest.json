@@ -1,0 +1,16 @@
+{
+  "name": "Duel des Esprits",
+  "short_name": "Duel Esprits",
+  "description": "Jeu de duel de cartes inspiré des légendes d'Afrique de l'Ouest, jouable hors connexion.",
+  "lang": "fr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1c110a",
+  "theme_color": "#c2542d",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#c2542d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Duel des Esprits</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== MENU ===== -->
+<main id="menu" class="screen">
+  <div class="kente"></div>
+  <div class="menu-body">
+    <div class="logo">🎭</div>
+    <h1>Duel des Esprits</h1>
+    <p class="subtitle">Jeu de cartes inspiré des légendes d'Afrique de l'Ouest</p>
+    <button id="btn-solo" class="big">⚔️ Duel contre l'ordinateur</button>
+    <button id="btn-online" class="big alt">🌍 Duel en ligne (Battle Link) — bientôt</button>
+    <button id="btn-rules" class="big ghost">📜 Règles du jeu</button>
+    <p id="stats" class="stats"></p>
+    <p class="offline">Fonctionne hors connexion une fois installé</p>
+  </div>
+  <div class="kente"></div>
+</main>
+
+<!-- ===== JEU ===== -->
+<main id="game" class="screen hidden">
+  <div class="kente thin"></div>
+
+  <div id="opp-bar" class="bar">
+    <span class="who">🤖 Adversaire</span>
+    <div class="lpbox"><div id="opp-fill" class="lpfill"></div><span id="opp-lp" class="lpnum">4000</span></div>
+    <span id="opp-deck" class="deck">🂠 30</span>
+  </div>
+  <div id="opp-hand"></div>
+
+  <div id="board">
+    <div id="opp-t" class="row traps"></div>
+    <div id="opp-m" class="row monsters"></div>
+    <div id="mid">
+      <div id="turn-info"></div>
+      <div id="log"></div>
+    </div>
+    <div id="me-m" class="row monsters"></div>
+    <div id="me-t" class="row traps"></div>
+  </div>
+
+  <div id="banner" class="hidden"><span id="banner-text"></span><button id="banner-cancel">Annuler</button></div>
+
+  <div id="me-bar" class="bar">
+    <span class="who">🧑🏾 Vous</span>
+    <div class="lpbox"><div id="me-fill" class="lpfill"></div><span id="me-lp" class="lpnum">4000</span></div>
+    <span id="me-deck" class="deck">🂠 30</span>
+  </div>
+  <div id="hand"></div>
+  <div id="actions">
+    <button id="btn-menu" class="small">☰ Menu</button>
+    <button id="btn-end" class="end">Fin du tour ➜</button>
+  </div>
+</main>
+
+<!-- ===== FICHE CARTE ===== -->
+<div id="sheet" class="overlay hidden">
+  <div class="panel">
+    <div class="sheet-top">
+      <div id="sheet-card"></div>
+      <div id="sheet-info"></div>
+    </div>
+    <div id="sheet-actions"></div>
+    <button id="sheet-close" class="ghost">Fermer</button>
+  </div>
+</div>
+
+<!-- ===== FENÊTRE (règles, fin de partie…) ===== -->
+<div id="modal" class="overlay center hidden">
+  <div class="panel modal-panel" id="modal-body"></div>
+</div>
+
+<div id="toast" class="hidden"></div>
+
+<script src="cards.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
